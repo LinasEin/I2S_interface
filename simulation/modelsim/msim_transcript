@@ -1,0 +1,198 @@
+# Reading C:/altera/15.0/modelsim_ase/tcl/vsim/pref.tcl
+# ERROR: No extended dataflow license exists
+# do i2s_interface_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim PE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet work rtl_work 
+# Copying C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/altera/15.0/projects/i2s_interface/db {C:/altera/15.0/projects/i2s_interface/db/bclk_altpll.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 18:18:04 on Apr 05,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/altera/15.0/projects/i2s_interface/db" C:/altera/15.0/projects/i2s_interface/db/bclk_altpll.v 
+# -- Compiling module bclk_altpll
+# 
+# Top level modules:
+# 	bclk_altpll
+# End time: 18:18:04 on Apr 05,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/altera/15.0/projects/i2s_interface/src/i2s_interface.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 18:18:04 on Apr 05,2020
+# vcom -reportprogress 300 -93 -work work C:/altera/15.0/projects/i2s_interface/src/i2s_interface.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity i2s_interface
+# -- Compiling architecture rtl of i2s_interface
+# End time: 18:18:05 on Apr 05,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/altera/15.0/projects/i2s_interface/src/bclk.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 18:18:05 on Apr 05,2020
+# vcom -reportprogress 300 -93 -work work C:/altera/15.0/projects/i2s_interface/src/bclk.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity bclk
+# -- Compiling architecture SYN of bclk
+# End time: 18:18:05 on Apr 05,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/altera/15.0/projects/i2s_interface/simulation/modelsim/i2s_interface.vht}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 18:18:05 on Apr 05,2020
+# vcom -reportprogress 300 -93 -work work C:/altera/15.0/projects/i2s_interface/simulation/modelsim/i2s_interface.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity i2s_interface_vhd_tst
+# -- Compiling architecture i2s_interface_arch of i2s_interface_vhd_tst
+# End time: 18:18:05 on Apr 05,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  testbench
+# vsim -gui "+altera" -l msim_transcript -do "i2s_interface_run_msim_rtl_vhdl.do" 
+# Start time: 18:18:06 on Apr 05,2020
+# ** Error: (vsim-3170) Could not find 'C:/altera/15.0/projects/i2s_interface/simulation/modelsim/rtl_work.testbench'.
+# 
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./i2s_interface_run_msim_rtl_vhdl.do PAUSED at line 14
+vsim work.i2s_interface
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.i2s_interface(rtl)
+# Loading work.bclk(syn)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.mf_pllpack(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altpll(behavior)
+# Loading altera_mf.mf_cycloneiii_pll(vital_pll)
+# Loading altera_mf.mf_cda_mn_cntr(behave)
+# Loading altera_mf.mf_cda_scale_cntr(behave)
+add wave -position insertpoint  \
+sim:/i2s_interface/clk \
+sim:/i2s_interface/mems_bclk \
+sim:/i2s_interface/lrcl \
+sim:/i2s_interface/bclk_in \
+sim:/i2s_interface/tri_state
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Linas  Hostname: DESKTOP-6P48IAJ  ProcessID: 8060
+# 
+#           Attempting to use alternate WLF file "./wlftibj18t".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftibj18t
+# 
+force -freeze sim:/i2s_interface/clk 1 0, 0 {10000 ps} -r 20000
+run
+# ** Note: Cyclone IV E PLL locked to incoming clock
+#    Time: 60 ns  Iteration: 3  Instance: /i2s_interface/bclkPll/altpll_component/CYCLONEIII_ALTPLL/M5
+vcom -93 -work work C:/altera/15.0/projects/i2s_interface/src/i2s_interface.vhd
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 18:37:11 on Apr 05,2020
+# vcom -reportprogress 300 -93 -work work C:/altera/15.0/projects/i2s_interface/src/i2s_interface.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity i2s_interface
+# -- Compiling architecture rtl of i2s_interface
+# End time: 18:37:11 on Apr 05,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.i2s_interface
+# vsim 
+# Start time: 18:37:16 on Apr 05,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.i2s_interface(rtl)
+# Loading work.bclk(syn)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.mf_pllpack(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altpll(behavior)
+# Loading altera_mf.mf_cycloneiii_pll(vital_pll)
+# Loading altera_mf.mf_cda_mn_cntr(behave)
+# Loading altera_mf.mf_cda_scale_cntr(behave)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint  \
+sim:/i2s_interface/clk \
+sim:/i2s_interface/mems_bclk \
+sim:/i2s_interface/lrcl \
+sim:/i2s_interface/bclk_in \
+sim:/i2s_interface/tri_state
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Linas  Hostname: DESKTOP-6P48IAJ  ProcessID: 8060
+# 
+#           Attempting to use alternate WLF file "./wlftr9q4f2".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftr9q4f2
+# 
+force -freeze sim:/i2s_interface/clk 1 0, 0 {10000 ps} -r 20000
+run
+# ** Note: Cyclone IV E PLL locked to incoming clock
+#    Time: 60 ns  Iteration: 3  Instance: /i2s_interface/bclkPll/altpll_component/CYCLONEIII_ALTPLL/M5
+vcom -93 -work work C:/altera/15.0/projects/i2s_interface/src/i2s_interface.vhd
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 18:52:16 on Apr 05,2020
+# vcom -reportprogress 300 -93 -work work C:/altera/15.0/projects/i2s_interface/src/i2s_interface.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity i2s_interface
+# -- Compiling architecture rtl of i2s_interface
+# End time: 18:52:17 on Apr 05,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim work.i2s_interface
+# vsim 
+# Start time: 18:52:23 on Apr 05,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.i2s_interface(rtl)
+# Loading work.bclk(syn)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.mf_pllpack(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altpll(behavior)
+# Loading altera_mf.mf_cycloneiii_pll(vital_pll)
+# Loading altera_mf.mf_cda_mn_cntr(behave)
+# Loading altera_mf.mf_cda_scale_cntr(behave)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint  \
+sim:/i2s_interface/clk \
+sim:/i2s_interface/mems_bclk \
+sim:/i2s_interface/lrcl \
+sim:/i2s_interface/bclk_in \
+sim:/i2s_interface/tri_state
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Linas  Hostname: DESKTOP-6P48IAJ  ProcessID: 8060
+# 
+#           Attempting to use alternate WLF file "./wlft25y7g3".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft25y7g3
+# 
+force -freeze sim:/i2s_interface/clk 1 0, 0 {10000 ps} -r 20000
+run
+# ** Note: Cyclone IV E PLL locked to incoming clock
+#    Time: 60 ns  Iteration: 3  Instance: /i2s_interface/bclkPll/altpll_component/CYCLONEIII_ALTPLL/M5
+# End time: 20:30:32 on Apr 05,2020, Elapsed time: 1:38:09
+# Errors: 0, Warnings: 3
